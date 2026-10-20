@@ -25,20 +25,18 @@ function App() {
       number: "01",
       title: "React Image Search",
       description:
-        "A responsive image search application built with React and the Unsplash API, including search functionality, loading states, and error handling.",
+        "A responsive image search application built with React and the Unsplash API, featuring search functionality, loading states, and error handling.",
       technologies: ["React.js", "JavaScript", "CSS", "Unsplash API"],
       link: "https://inspiring-swan-3b0f59.netlify.app/",
     },
-
     {
       number: "02",
       title: "E-Commerce Website",
       description:
-        "A user-friendly e-commerce website interface designed to present products clearly and provide a smooth browsing experience.",
+        "A responsive e-commerce interface designed to present products clearly and provide a simple, user-friendly browsing experience.",
       technologies: ["HTML", "CSS", "JavaScript"],
       link: "https://github.com/monika2174/shopeasy-ecommerce",
     },
-
     {
       number: "03",
       title: "Travel Booking Platform",
@@ -47,39 +45,42 @@ function App() {
       technologies: ["React.js", "Python", "FastAPI", "MySQL"],
       link: "",
     },
-
     {
       number: "04",
       title: "Campus Ride",
       description:
-        "A campus ride management platform designed to make transportation easier for students by connecting passengers and drivers.",
-      technologies: ["React.js", "Node.js", "Backend", "WebSockets"],
+        "A campus transportation platform designed to make student travel easier by connecting passengers and drivers through a web-based system.",
+      technologies: ["React.js", "Node.js", "WebSockets"],
       link: "https://github.com/monika2174/Campus-Ride-1",
     },
   ];
 
-  // INTERNSHIPS
   const internships = [
     {
+      number: "01",
       company: "Bist Technologies",
+      description:
+        "Internship experience that provided practical exposure to professional development and real-world technology practices.",
       file: "/certificates/Bist_Technologies.pdf",
     },
-
     {
+      number: "02",
       company: "SkillDzire",
+      description:
+        "Internship experience focused on developing practical technical skills and gaining exposure to industry-oriented work.",
       file: "/certificates/Borra_Monika_certificate.pdf",
     },
   ];
 
-  // CERTIFICATES
   const certificates = [
     {
+      number: "01",
       title: "Augmented Reality & Virtual Reality Workshop",
       organization: "Bapatla Engineering College",
       file: "/certificates/Y22AIT414.pdf",
     },
-
     {
+      number: "02",
       title: "Artificial Intelligence Fundamentals",
       organization: "Artificial Intelligence Fundamentals",
       file:
@@ -91,11 +92,11 @@ function App() {
     <div className={`portfolio ${lightMode ? "light-mode" : ""}`}>
       {/* NAVBAR */}
       <header className="navbar">
-        <a href="#home" className="logo">
+        <a href="#home" className="logo" aria-label="Monika Borra home">
           M<span>.</span>
         </a>
 
-        <nav className="nav-links">
+        <nav className="nav-links" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
@@ -108,6 +109,9 @@ function App() {
           className="theme-toggle"
           onClick={() => setLightMode(!lightMode)}
           type="button"
+          aria-label={
+            lightMode ? "Switch to dark mode" : "Switch to light mode"
+          }
         >
           {lightMode ? "☾ Dark Mode" : "☀ Light Mode"}
         </button>
@@ -119,10 +123,8 @@ function App() {
           <div className="hero-content">
             <div className="availability">
               <span className="status-dot"></span>
-              HI I AM MONIKA..
+              HELLO, I'M MONIKA
             </div>
-
-            
 
             <h1>
               Hi, I'm <span className="gradient-text">Monika Borra</span>
@@ -131,10 +133,10 @@ function App() {
             <h2>Web Developer & Technology Enthusiast</h2>
 
             <p className="hero-description">
-              I am passionate about building responsive web applications and
-              creating simple, useful digital experiences. I enjoy learning
-              new technologies, solving problems, and turning ideas into
-              working projects.
+              I build responsive web applications and enjoy turning ideas
+              into simple, useful digital experiences. I am passionate about
+              learning modern technologies, solving problems, and continuously
+              improving my development skills.
             </p>
 
             <div className="hero-buttons">
@@ -159,18 +161,12 @@ function App() {
               <a
                 href="https://github.com/monika2174"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 GitHub ↗
               </a>
 
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn ↗
-              </a>
+              <a href="#contact">LinkedIn ↗</a>
             </div>
           </div>
 
@@ -186,7 +182,7 @@ function App() {
 
               <div className="profile-photo-wrapper">
                 <img
-                  src="/monika photo imp.jpg"
+                  src="/monika photo imp.jpeg"
                   alt="Monika Borra"
                   className="profile-image"
                 />
@@ -215,7 +211,7 @@ function App() {
 
                   <div>
                     <small>PROJECTS</small>
-                    <p>4+</p>
+                    <p>4</p>
                   </div>
                 </div>
 
@@ -224,7 +220,7 @@ function App() {
 
                   <div>
                     <small>FOCUS</small>
-                    <p>Software & Technology</p>
+                    <p>Web Development</p>
                   </div>
                 </div>
               </div>
@@ -235,12 +231,12 @@ function App() {
         {/* STATS */}
         <section className="stats-strip">
           <div>
-            <strong>04+</strong>
+            <strong>04</strong>
             <span>Projects</span>
           </div>
 
           <div>
-            <strong>13+</strong>
+            <strong>13</strong>
             <span>Technical Skills</span>
           </div>
 
@@ -264,9 +260,7 @@ function App() {
               About <span className="gradient-text">Me</span>
             </h2>
 
-            <p>
-              A little about my interests and what I enjoy building.
-            </p>
+            <p>A little about my interests and what I enjoy building.</p>
           </div>
 
           <div className="about-card">
@@ -276,11 +270,12 @@ function App() {
               <h3>Curious Mind. Creative Builder.</h3>
 
               <p>
-                I'm Monika Borra, a technology enthusiast interested in web
-                development and software engineering. I enjoy developing
-                projects, exploring new tools, and improving my coding skills
-                through hands-on practice. My goal is to contribute to
-                meaningful projects while continuing to grow as a developer.
+                I'm Monika Borra, a technology enthusiast with an interest in
+                web development and software engineering. I enjoy building
+                projects, exploring new technologies, and strengthening my
+                coding skills through hands-on practice. I am looking forward
+                to contributing to meaningful projects while growing as a
+                developer.
               </p>
             </div>
           </div>
@@ -292,11 +287,13 @@ function App() {
             <p className="eyebrow">WHAT I WORK WITH</p>
 
             <h2>
-              Skills &{" "}
-              <span className="gradient-text">Technologies</span>
+              Skills & <span className="gradient-text">Technologies</span>
             </h2>
 
-            <p>Tools and technologies I have learned and practiced.</p>
+            <p>
+              Technologies and tools I have learned and practiced through
+              projects and hands-on experience.
+            </p>
           </div>
 
           <div className="skills-grid">
@@ -323,17 +320,17 @@ function App() {
               Featured <span className="gradient-text">Projects</span>
             </h2>
 
-            <p>A selection of projects I have worked on.</p>
+            <p>
+              A selection of projects that demonstrate my development skills
+              and practical learning.
+            </p>
           </div>
 
           <div className="projects-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.number}>
                 <div className="project-top">
-                  <span className="project-number">
-                    {project.number}
-                  </span>
-
+                  <span className="project-number">{project.number}</span>
                   <span className="project-icon">↗</span>
                 </div>
 
@@ -352,7 +349,7 @@ function App() {
                     href={project.link}
                     className="project-link"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     View Project <span>↗</span>
                   </a>
@@ -376,31 +373,33 @@ function App() {
             </h2>
 
             <p>
-              Internship experiences that helped me gain practical
-              knowledge and industry exposure.
+              Internship experiences that helped me develop practical skills
+              and gain exposure to professional work environments.
             </p>
           </div>
 
           <div className="internships-grid">
-            {internships.map((internship, index) => (
+            {internships.map((internship) => (
               <article
                 className="internship-card"
                 key={internship.company}
               >
                 <div className="internship-number">
-                  {String(index + 1).padStart(2, "0")}
+                  {internship.number}
                 </div>
 
                 <div className="internship-content">
                   <h3>{internship.company}</h3>
 
+                  <p>{internship.description}</p>
+
                   <a
                     href={internship.file}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="project-link"
                   >
-                    View Certificate ↗
+                    View Internship Certificate ↗
                   </a>
                 </div>
               </article>
@@ -418,19 +417,19 @@ function App() {
             </h2>
 
             <p>
-              Workshops, courses and technical certifications I have
-              completed.
+              Workshops and technical certifications that support my
+              continuous learning.
             </p>
           </div>
 
           <div className="internships-grid">
-            {certificates.map((certificate, index) => (
+            {certificates.map((certificate) => (
               <article
                 className="internship-card"
                 key={certificate.file}
               >
                 <div className="internship-number">
-                  {String(index + 1).padStart(2, "0")}
+                  {certificate.number}
                 </div>
 
                 <div className="internship-content">
@@ -441,7 +440,7 @@ function App() {
                   <a
                     href={certificate.file}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="project-link"
                   >
                     View Certificate ↗
@@ -455,15 +454,12 @@ function App() {
         {/* CONTACT */}
         <section className="section contact-section" id="contact">
           <div className="contact-card">
-            
-
             <h2>
-              Let's Work{" "}
-              <span className="gradient-text">Together</span>
+              Let's Work <span className="gradient-text">Together</span>
             </h2>
 
             <p>
-              I'm interested in opportunities to learn, collaborate, and
+              I'm open to opportunities where I can learn, collaborate, and
               contribute to real-world projects. Feel free to get in touch.
             </p>
 
@@ -476,12 +472,10 @@ function App() {
               </a>
 
               <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noreferrer"
+                href="mailto:monikaborra2174@gmail.com?subject=Portfolio%20Opportunity"
                 className="button button-secondary"
               >
-                Connect on LinkedIn ↗
+                Get In Touch ↗
               </a>
             </div>
           </div>
@@ -490,9 +484,7 @@ function App() {
 
       {/* FOOTER */}
       <footer className="footer">
-        <p><p>© 2026 Monika Borra. All rights reserved.</p></p>
-
-        
+        <p>© 2026 Monika Borra. All rights reserved.</p>
       </footer>
     </div>
   );
